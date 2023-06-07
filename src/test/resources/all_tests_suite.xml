@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="All Pet Store Tests" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="utils.testng.listeners.TestListener"/>
+        <listener class-name="utils.testng.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="Choose Item To Basket Tests">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.ChooseItemToBasketTests"/>
+        </classes>
+    </test>
+
+    <test name="Negative Login Tests">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.FailedLoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Subscription To The Newsletter Tests">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="tests.SubscriptionToTheNewsletterTests"/>
+        </classes>
+    </test>
+
+</suite>
